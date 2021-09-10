@@ -75,14 +75,14 @@ const getRandomQuote = () => {
  * randomizes background color when printing different quotes
  ***/
 const randomizeBackgroundColor = () => {
-  const randomColorValue = () => Math.floor(Math.random() * 256);
+  const randomColorValues = () => Math.floor(Math.random() * 256);
 
-  const randomRGBColors = (color) => {
+  const rgb = (color) => {
     const rgbColor = `rgb(${color()},${color()},${color()})`;
     return rgbColor;
   }
 
-  document.body.style.background = randomRGBColors(randomColorValue);
+  document.body.style.background = rgb(randomColorValues);
 };
 
 /***
